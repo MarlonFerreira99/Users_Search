@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  >
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Consulta de Usuários</title>
+</head>
+<body>
+
+    <h1>Consulta de usuários</h1>
+
+    <div id="spinner" class="flex-row">
+      <div class="preloader-wrapper medium active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+      <span style="margin-left: 10px; font-size: 24px;">Aguarde...</span>
+    </div>
+
+
+    <div class="container-form">
+        <input type="text" id="inputFilter" placeholder="Pesquise aqui">
+        <button 
+          id="buttonFilter" 
+          style="margin-left: 5px;"
+          >Buscar
+        </button>
+    </div>
+
+    <div class="result">
+        <div id="foundUsers" class="card-results">
+          <h3><span id="countUsers">0</span> usuário(s) encontrado(s)</h3>
+          <div id="usersList"></div>
+        </div>
+        
+        <div id="statistics" class="card-results">
+          <h3>Estatísticas</h3>
+          <div class="flex-row">
+
+              <div class="card-statistics">
+                <h6>Gênero Masculino:</h6><span id="countMale">0</span>
+              </div>
+
+              <div class="card-statistics">
+                <h6>Gênero feminino:</h6><span id="countFemale">0</span>
+              </div>
+
+              <div class="card-statistics"><h6>Soma das idades:</h6>
+                <span id="sumAge">0</span>
+              </div>
+
+              <div class="card-statistics">
+                <h6>Média das idades:</h6><span id="averageAge">0</span>
+              </div>
+
+          </div>
+        </div>
+    </div>
+      
+    
+    <script defer src="./js/script.js"></script>
+</body>
+</html>
